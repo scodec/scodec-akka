@@ -17,7 +17,7 @@ Currently, this library only defines conversions between `ByteVector` and `ByteS
 Getting Binaries
 ----------------
 
-This library is published to Maven Central under `org.scodec` %% `scodec-akka`.
+This library is published to Maven Central under `org.scodec %% scodec-akka`.
 
 See the [releases page on the website](http://scodec.org/releases/).
 

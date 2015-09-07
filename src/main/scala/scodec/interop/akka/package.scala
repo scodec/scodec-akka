@@ -7,10 +7,10 @@ import _root_.akka.util.ByteString
 package object akka {
 
   implicit class EnrichedByteString(val value: ByteString) extends AnyVal {
-    def toByteVector: ByteVector = ByteVector(value.asByteBuffer)
+    def toByteVector: ByteVector = ByteVector.view(value.asByteBuffer)
   }
 
   implicit class EnrichedByteVector(val value: ByteVector) extends AnyVal {
-    def toByteString: ByteString = ByteString(value.toByteBuffer)
+    def toByteString: ByteString = PrivacyHelper.createByteString1C(value.toByteBuffer)
   }
 }

@@ -9,6 +9,8 @@ contributors ++= Seq(Contributor("mpilquist", "Michael Pilquist"))
 
 rootPackage := "scodec.interop.akka"
 
+crossScalaVersions := crossScalaVersions.filterNot { _.startsWith("2.12.") }
+
 libraryDependencies ++= Seq(
   "org.scodec" %% "scodec-core" % "1.9.0",
   "com.typesafe.akka" %% "akka-stream" % "2.4.4",

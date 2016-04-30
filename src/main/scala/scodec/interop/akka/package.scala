@@ -7,7 +7,7 @@ import _root_.akka.util.ByteString
 package object akka {
 
   implicit class EnrichedByteString(val value: ByteString) extends AnyVal {
-    def toByteVector: ByteVector = ByteVector.view(idx => value(idx), value.size)
+    def toByteVector: ByteVector = ByteVector.viewAt((idx: Long) => value(idx.toInt), value.size.toLong)
   }
 
   implicit class EnrichedByteVector(val value: ByteVector) extends AnyVal {

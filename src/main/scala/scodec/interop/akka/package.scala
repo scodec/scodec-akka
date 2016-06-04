@@ -11,6 +11,6 @@ package object akka {
   }
 
   implicit class EnrichedByteVector(val value: ByteVector) extends AnyVal {
-    def toByteString: ByteString = PrivacyHelper.createByteString1C(value.toByteBuffer)
+    def toByteString: ByteString = PrivacyHelper.createByteString1C(value.toArray)
   }
 }

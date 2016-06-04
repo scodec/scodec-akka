@@ -6,8 +6,8 @@ import akka.util.ByteString.ByteString1C;
 
 interface PrivacyHelper {
 
-	static ByteString1C createByteString1C(ByteBuffer buffer) {
-		return new ByteString1C(buffer.array());
-	}
-	
+    static ByteString1C createByteString1C(byte[] array) {
+        return new ByteString1C(array);
+    }
+
 }
